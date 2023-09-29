@@ -1,0 +1,5 @@
+172.30.0.4 - - [29/Sep/2023:13:24:52 +0700] "GET / HTTP/1.1" 200 469 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.43"
+172.30.0.4 - - [29/Sep/2023:13:24:52 +0700] "GET /assets/index-c322ae43.css HTTP/1.1" 200 1303 "http://localhost:7070/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.43"
+172.30.0.4 - - [29/Sep/2023:13:24:52 +0700] "GET /assets/index-127f2da4.js HTTP/1.1" 200 51614 "http://localhost:7070/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.43"
+172.30.0.4 - - [29/Sep/2023:13:24:52 +0700] "GET /assets/vue-5532db34.svg HTTP/1.1" 200 496 "http://localhost:7070/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.43"
+172.30.0.4 - - [29/Sep/2023:13:24:53 +0700] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.43"

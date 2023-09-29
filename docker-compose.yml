@@ -1,0 +1,47 @@
+version: "0.0.1"
+services:
+  apache-reverse-proxy:
+    container_name: apache-reverse-proxy
+    image: apache-reverse-proxy
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - 7070:80
+    volumes:
+      - ./log:/usr/local/apache2/logs/
+      - ./httpd.conf/httpd.conf:/usr/local/apache2/conf/httpd.conf
+    networks:
+      - networks-host
+
+  apache-react:
+    container_name: apache-react
+    image: apache-react
+    build:
+      context: .
+      dockerfile: dockerfile
+    volumes:
+      - ./apache-web-conf/react-log:/usr/local/apache2/logs/
+      - ./apache-web-conf/httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./apache-web-conf/conf.d:/usr/local/apache2/conf/conf.d
+      - ./apache-web-conf/react-app:/usr/local/apache2/htdocs/
+    networks:
+      - networks-host
+  
+  apache-vue:
+    container_name: apache-vue
+    image: apache-vue
+    build:
+      context: .
+      dockerfile: dockerfile
+    volumes:
+      - ./apache-web-conf/vue-log:/usr/local/apache2/logs/
+      - ./apache-web-conf/httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./apache-web-conf/conf.d:/usr/local/apache2/conf/conf.d
+      - ./apache-web-conf/vue-app:/usr/local/apache2/htdocs/
+    networks:
+      - networks-host
+
+networks:
+  networks-host:
+    driver: bridge
